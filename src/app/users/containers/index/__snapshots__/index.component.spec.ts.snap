@@ -6,16 +6,45 @@ exports[`IndexComponent should match snapshot 1`] = `
   store={[Function Object]}
   users="undefined"
 >
-  <button
-    ng-reflect-router-link="add"
-    routerlink="add"
-    tabindex="0"
+  <nav
+    class="navbar navbar-light bg-light"
   >
-    Add User
-  </button><app-user-list>
-    <ul>
+    <a
+      class="navbar-brand"
+      href="#"
+    >
+      <img
+        alt=""
+        class="d-inline-block align-top"
+        height="30"
+        src=""
+        width="30"
+      />
+       Super Hero Co. 
+    </a>
+  </nav><div
+    class="container"
+  >
+    <div
+      class="row"
+    >
+      <h1>
+        User Accounts
+      </h1>
+    </div>
+    <button
+      ng-reflect-router-link="add"
+      routerlink="add"
+      tabindex="0"
+    >
+      Add User
+    </button>
+  </div><app-user-list>
+    <div
+      class="card-container"
+    >
       
-    </ul>
+    </div>
   </app-user-list>
 </ng-component>
 `;

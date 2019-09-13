@@ -5,6 +5,7 @@ import * as fromRoot from '@state/index';
 import { AddUser } from '@state/user/user.actions';
 import { UserFormComponent } from './../../components/user-form/user-form.component';
 import { AddComponent } from './add.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('AddComponent', () => {
   let component: AddComponent;
@@ -17,7 +18,8 @@ describe('AddComponent', () => {
       imports: [
         FormsModule,
         ReactiveFormsModule,
-        StoreModule.forRoot(fromRoot.reducers)
+        StoreModule.forRoot(fromRoot.reducers),
+        RouterTestingModule
       ]
     }).compileComponents();
   }));

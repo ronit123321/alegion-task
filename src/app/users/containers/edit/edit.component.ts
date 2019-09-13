@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Store, select } from '@ngrx/store';
 import * as fromRoot from '@state/index';
 import { selectSelectedUser } from '@state/user';
@@ -17,7 +17,8 @@ export class EditComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private store: Store<fromRoot.State>
+    private store: Store<fromRoot.State>,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -35,5 +36,6 @@ export class EditComponent implements OnInit {
 
   onUserChange(user: User) {
     this.store.dispatch(new UpdateUser({ user: user }));
+    this.router.navigate(['/']);
   }
 }

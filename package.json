@@ -6,8 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --runInBand",
+    "watchtest": "jest --watch",
+    "testdetails": "npm test -- -u --collectCoverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

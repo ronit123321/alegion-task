@@ -23,14 +23,19 @@ describe('UserListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display a list of heroes', () => {
-    const ulDebugEl = fixture.debugElement.query(By.css('ul'));
-    const ulEl = ulDebugEl.nativeElement as HTMLUListElement;
+  it('should display a list of users', () => {
     component.users = users;
     fixture.detectChanges();
-    expect(ulEl.childElementCount).toBe(users.length);
+    const ulDebugEl = fixture.debugElement.query(By.css('.card-box'));
+    const ulEl = ulDebugEl.nativeElement as HTMLUListElement;
 
-    const firstLi = ulEl.querySelector('li:first-child');
+    const childElementCount = fixture.debugElement.query(By.css('ul')).nativeElement;
+
+    console.log(childElementCount);
+
+    expect(childElementCount).toBe(users.length);
+    const firstLi = ulEl.querySelector('li:first-child').querySelector('a');
+
     expect(firstLi.textContent).toEqual(
       `${users[0].first_name} ${users[0].last_name}`
     );
