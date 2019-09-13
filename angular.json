@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "alegion-testing": {
+    "alegion-task": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/alegion-testing",
+            "outputPath": "dist/alegion-task",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "alegion-testing:build"
+            "browserTarget": "alegion-task:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "alegion-testing:build:production"
+              "browserTarget": "alegion-task:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "alegion-testing:build"
+            "browserTarget": "alegion-task:build"
           }
         },
         "test": {
@@ -99,7 +99,7 @@
         }
       }
     },
-    "alegion-testing-e2e": {
+    "alegion-task-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,7 +107,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "alegion-testing:serve"
+            "devServerTarget": "alegion-task:serve"
           }
         },
         "lint": {
@@ -122,9 +122,8 @@
       }
     }
   },
-  "defaultProject": "alegion-testing",
+  "defaultProject": "alegion-task",
   "cli": {
     "defaultCollection": "@ngrx/schematics"
   }
 }
-
