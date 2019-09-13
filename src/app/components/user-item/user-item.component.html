@@ -1,0 +1,7 @@
+<div class='item-container' (click)="navigateToUser($event)">
+    <img [src]="user.avatar ? user.avatar : 'assets/user.png'" />
+    <div class="details">
+        <h5>{{ user.first_name }} &nbsp; {{ user.last_name }} </h5>
+        <span>{{ currentDate | date : 'MM/dd/yyyy'}}</span>
+    </div>
+</div>
