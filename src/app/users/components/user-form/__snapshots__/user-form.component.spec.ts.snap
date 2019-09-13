@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserFormComponent should match snapshot 1`] = `
+<app-user-form
+  form={[Function FormGroup]}
+  formBuilder={[Function FormBuilder]}
+  userChange={[Function EventEmitter]}
+>
+  <form
+    class="ng-untouched ng-pristine ng-invalid"
+    ng-reflect-form="[object Object]"
+    novalidate=""
+  >
+    <input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="first_name"
+      ng-reflect-name="first_name"
+      placeholder="First Name"
+      type="text"
+    />
+    <input
+      class="ng-untouched ng-pristine ng-invalid"
+      formcontrolname="last_name"
+      ng-reflect-name="last_name"
+      placeholder="Last Name"
+      type="text"
+    />
+    <button>
+      Save
+    </button>
+  </form>
+</app-user-form>
+`;

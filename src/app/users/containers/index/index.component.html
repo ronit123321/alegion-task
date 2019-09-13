@@ -1,0 +1,15 @@
+<!-- <app-header></app-header> -->
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+        Super Hero Co.
+    </a>
+</nav>
+<div class="container">
+    <div class="row">
+        <h1>User Accounts</h1>
+    </div>
+    <button routerLink="add">Add User</button>
+</div>
+
+<app-user-list [users]="users | async" (selectUser)="onSelectUser($event)"></app-user-list>

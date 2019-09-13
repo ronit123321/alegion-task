@@ -1,13 +1,1 @@
-<app-header></app-header>
-
-<div class="container">
-    <div class="row">
-        <h1>User Accounts</h1>
-    </div>
-    <button *ngIf="!userService.modalVisibile" (click)='openNewUserForm($event)'>Create New</button>
-    <new-user-form *ngIf="userService.modalVisibile" (addNew)='handleSubmit($event)'></new-user-form>
-</div>
-
-<div>
-    <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

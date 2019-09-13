@@ -1,0 +1,11 @@
+<div class="card-container">
+  <ul class="card-box" *ngFor="let user of users" trackBy="user.id">
+    <li class='item-container' (click)="selectUser.emit(user)">
+      <img [src]="user?.avatar" />
+      <div class="details">
+        <a href="javascript:void(0)">{{user.first_name}} {{user.last_name}}</a>
+        <span>{{ currentDate | date : 'MM/dd/yyyy'}}</span>
+      </div>
+    </li>
+  </ul>
+</div>
